@@ -51,6 +51,11 @@ public class LinkedListString {
 		}
 
 	}
+	/**
+	 * Pretvara listu u niz stringova
+	 * @param other Lista koja se pretvara
+	 * @return Niz stringova u koje su vrijednosti clanova liste
+	 */
 	public String[] toArray (LinkedListString other){
 		String[] array=new String[size];
 		PersonNode copy=other.head;
