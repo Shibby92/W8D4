@@ -14,6 +14,7 @@ public class LinkedListStringTest {
 			name = TextIO.getlnString();
 		}
 		test.printList();
+		System.out.println();
 		String[] stringArray = test.toArray(test);
 		for (String meh : stringArray)
 			System.out.println(meh);

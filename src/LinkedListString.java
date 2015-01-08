@@ -1,4 +1,4 @@
-public class LinkedListString {
+public class LinkedListString implements List {
 	private PersonNode head;
 	private int size;
 
@@ -22,10 +22,13 @@ public class LinkedListString {
 			this.next = null;
 		}
 	}
-/**
- * Dodaje ime na kraj liste
- * @param value Ime
- */
+
+	/**
+	 * Dodaje ime na kraj liste
+	 * 
+	 * @param value
+	 *            Ime
+	 */
 	public void add(String value) {
 		PersonNode newNode = new PersonNode(value);
 		if (this.head == null) {
@@ -40,9 +43,10 @@ public class LinkedListString {
 		current.next = newNode;
 		size++;
 	}
-/**
- * Ispisuje listu (imena)
- */
+
+	/**
+	 * Ispisuje listu (imena)
+	 */
 	public void printList() {
 		PersonNode print = head;
 		while (print != null) {
@@ -51,17 +55,20 @@ public class LinkedListString {
 		}
 
 	}
+
 	/**
 	 * Pretvara listu u niz stringova
-	 * @param other Lista koja se pretvara
+	 * 
+	 * @param other
+	 *            Lista koja se pretvara
 	 * @return Niz stringova u koje su vrijednosti clanova liste
 	 */
-	public String[] toArray (LinkedListString other){
-		String[] array=new String[size];
-		PersonNode copy=other.head;
-		for(int i=0;i<array.length;i++){
-			array[i]=copy.value;
-			copy=copy.next;
+	public String[] toArray(LinkedListString other) {
+		String[] array = new String[size];
+		PersonNode copy = other.head;
+		for (int i = 0; i < array.length; i++) {
+			array[i] = copy.value;
+			copy = copy.next;
 		}
 		return array;
 	}
